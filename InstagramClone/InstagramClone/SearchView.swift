@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SearchView.swift
 //  InstagramClone
 //
 //  Created by Taro Altrichter on 16.08.24.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SearchView: View {
     var body: some View {
-        
-        MainTabView()
+        Text("Search")
     }
 }
 
 #Preview {
-    ContentView()
+    SearchView()
 }

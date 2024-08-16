@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FeedView.swift
 //  InstagramClone
 //
 //  Created by Taro Altrichter on 16.08.24.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FeedView: View {
     var body: some View {
-        
-        MainTabView()
+        Text("Feed")
     }
 }
 
 #Preview {
-    ContentView()
+    FeedView()
 }
