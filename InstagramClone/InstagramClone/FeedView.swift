@@ -18,18 +18,20 @@ struct FeedView: View {
                 }
                 .padding(.top, 8)
             }
-        }
-        .navigationTitle("Feed")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Text("Logo")
-                    .frame(width: 100, height: 32)
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-                Image(systemName: "paperplane")
-                    .imageScale(.large)
+            .navigationTitle("Feed")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("Logo")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .frame(width: 100, height: 32)
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Image(systemName: "paperplane")
+                        .imageScale(.large)
+                }
             }
         }
     }
