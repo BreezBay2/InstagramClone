@@ -23,6 +23,7 @@
 		2FF6B1262C6FA12500ECF5EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B1252C6FA12500ECF5EE /* LoginView.swift */; };
 		2FF6B1282C6FA6E100ECF5EE /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B1272C6FA6E100ECF5EE /* AddEmailView.swift */; };
 		2FFA11962C7B4B1C00912556 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA11952C7B4B1C00912556 /* User.swift */; };
+		2FFA11982C7B863C00912556 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA11972C7B863C00912556 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		2FF6B1252C6FA12500ECF5EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FF6B1272C6FA6E100ECF5EE /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
 		2FFA11952C7B4B1C00912556 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2FFA11972C7B863C00912556 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2FFA11952C7B4B1C00912556 /* User.swift */,
+				2FFA11972C7B863C00912556 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				2FFA11962C7B4B1C00912556 /* User.swift in Sources */,
 				2FF6B10E2C6F969C00ECF5EE /* InstagramCloneApp.swift in Sources */,
 				2FF6B1242C6F97DE00ECF5EE /* ProfileView.swift in Sources */,
+				2FFA11982C7B863C00912556 /* Post.swift in Sources */,
 				2F94D1802C70CC660026D15A /* CreateUsernameView.swift in Sources */,
 				2F94D1822C70D7F40026D15A /* CreatePasswordView.swift in Sources */,
 				2FF6B1282C6FA6E100ECF5EE /* AddEmailView.swift in Sources */,
