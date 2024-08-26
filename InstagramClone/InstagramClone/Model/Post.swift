@@ -20,6 +20,8 @@ struct Post: Identifiable, Codable {
 
 extension Post {
     static var MOCK_POSTS: [Post] = [
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "This is a test caption", likes: 13, imageUrl: "picture1", timeStamp: Date(), user: User.MOCK_USERS[0])
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "This is a test caption for a picture of a dog", likes: 13, imageUrl: "picture1", timeStamp: Date(), user: User.MOCK_USERS[0]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Bird", likes: 13, imageUrl: "picture2", timeStamp: Date(), user: User.MOCK_USERS[1]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "I like beer and hanging out with my friends", likes: 13, imageUrl: "picture3", timeStamp: Date(), user: User.MOCK_USERS[2]),
     ]
 }

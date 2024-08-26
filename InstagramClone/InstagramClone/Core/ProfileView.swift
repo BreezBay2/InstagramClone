@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    let user: User
+
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1)
     ]
+    
+    var posts: [Post] {
+        return Post.MOCK_POSTS.filter({ $0.user?.username == user.username})
+    }
     
     private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
@@ -23,7 +30,7 @@ struct ProfileView: View {
                     
                     // picture + numbers
                     HStack {
-                        Image(systemName: "person.circle.fill")
+                        Image(user.profileImageUrl ?? "")
                             .resizable()
                             .frame(width: 80, height: 80)
                             .clipShape(Circle())
@@ -67,11 +74,11 @@ struct ProfileView: View {
                     
                     // name and bio
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Peter Parker")
+                        Text(user.fullname ?? "")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         
-                        Text("This is a test bio for now...")
+                        Text(user.bio ?? "")
                             .font(.footnote)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -93,8 +100,8 @@ struct ProfileView: View {
                     Divider()
                     
                     LazyVGrid(columns: gridItems, spacing: 1) {
-                        ForEach(0...4, id: \.self) { post in
-                            Image("picture1")
+                        ForEach(posts) { post in
+                            Image(post.imageUrl)
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: imageDimension, height: imageDimension)
@@ -120,5 +127,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.MOCK_USERS[2])
 }
