@@ -80,6 +80,8 @@ struct ProfileView: View {
                         
                         Text(user.bio ?? "")
                             .font(.footnote)
+                        
+                        Text(user.username)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)

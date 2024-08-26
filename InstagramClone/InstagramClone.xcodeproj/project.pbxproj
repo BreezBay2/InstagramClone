@@ -19,6 +19,7 @@
 		2FB558F82C7C8F8E006F9B05 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB558F72C7C8F8E006F9B05 /* ContentViewModel.swift */; };
 		2FC4F1212C7C98D7000C48D6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1202C7C98D7000C48D6 /* RegistrationViewModel.swift */; };
 		2FC4F1232C7CAFE3000C48D6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1222C7CAFE3000C48D6 /* LoginViewModel.swift */; };
+		2FC4F1252C7CD6F6000C48D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC4F1242C7CD6F6000C48D6 /* FirebaseDatabase */; };
 		2FF6B10E2C6F969C00ECF5EE /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10D2C6F969C00ECF5EE /* InstagramCloneApp.swift */; };
 		2FF6B1102C6F969C00ECF5EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10F2C6F969C00ECF5EE /* ContentView.swift */; };
 		2FF6B1122C6F969D00ECF5EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF6B1112C6F969D00ECF5EE /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 			files = (
 				2FB558EF2C7C8679006F9B05 /* FirebaseAuth in Frameworks */,
 				2FB558F12C7C8679006F9B05 /* FirebaseFirestore in Frameworks */,
+				2FC4F1252C7CD6F6000C48D6 /* FirebaseDatabase in Frameworks */,
 				2FB558F32C7C8679006F9B05 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +181,7 @@
 				2FB558EE2C7C8679006F9B05 /* FirebaseAuth */,
 				2FB558F02C7C8679006F9B05 /* FirebaseFirestore */,
 				2FB558F22C7C8679006F9B05 /* FirebaseStorage */,
+				2FC4F1242C7CD6F6000C48D6 /* FirebaseDatabase */,
 			);
 			productName = InstagramClone;
 			productReference = 2FF6B10A2C6F969C00ECF5EE /* InstagramClone.app */;
@@ -489,6 +492,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FB558ED2C7C8679006F9B05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		2FC4F1242C7CD6F6000C48D6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB558ED2C7C8679006F9B05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

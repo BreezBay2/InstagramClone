@@ -21,7 +21,7 @@ struct LoginView: View {
                 
                 VStack {
                     TextField("Enter your E-Mail", text: $viewModel.email)
-                        .textInputAutocapitalization(.none)
+                        .textInputAutocapitalization(.never)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
@@ -29,7 +29,7 @@ struct LoginView: View {
                         .padding(.horizontal, 24)
                     
                     SecureField("Enter your Password", text: $viewModel.password)
-                        .textInputAutocapitalization(.none)
+                        .textInputAutocapitalization(.never)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let user: User
+    
     var body: some View {
         TabView {
             FeedView()
@@ -30,7 +32,7 @@ struct MainTabView: View {
                     Image(systemName: "heart")
                 }
             
-            ProfileView(user: User.MOCK_USERS[0])
+            ProfileView(user: user)
                 .tabItem {
                     Image(systemName: "person")
                 }
@@ -39,5 +41,5 @@ struct MainTabView: View {
 }
 
 #Preview {
-    MainTabView()
+    MainTabView(user: User.MOCK_USERS[0])
 }
