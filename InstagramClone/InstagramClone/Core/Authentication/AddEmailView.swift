@@ -1,33 +1,43 @@
 //
-//  CompleteSignUpView.swift
+//  AddEmailView.swift
 //  InstagramClone
 //
-//  Created by Taro Altrichter on 17.08.24.
+//  Created by Taro Altrichter on 16.08.24.
 //
 
 import SwiftUI
 
-struct CompleteSignUpView: View {
+struct AddEmailView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: RegistrationViewModel
+    @State private var email = ""
     
     var body: some View {
-        VStack {
-            Text("Welcome to Instagram!")
+        VStack(spacing: 12) {
+            Text("Add your E-Mail")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
-                .multilineTextAlignment(.center)
             
-            Text("Click below to complete the registration and start using Instagram")
+            Text("You'll use this E-Mail to sign in to your account")
                 .font(.footnote)
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            Button {
-                print("finish registration")
+            TextField("E-Mail", text: $viewModel.email)
+                .textInputAutocapitalization(.never)
+                .font(.subheadline)
+                .padding(12)
+                .background(Color(.systemGray6))
+                .cornerRadius(10)
+                .padding(.horizontal, 24)
+            
+            NavigationLink {
+                CreateUsernameView()
+                    .navigationBarBackButtonHidden()
             } label: {
-                Text("Complete Sign Up")
+                Text("Next")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
@@ -36,8 +46,9 @@ struct CompleteSignUpView: View {
                     .cornerRadius(8)
             }
             .padding(.vertical)
+            
         }
-        .toolbar {
+        .toolbar{
             ToolbarItem(placement: .topBarLeading) {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
@@ -46,10 +57,10 @@ struct CompleteSignUpView: View {
                     }
             }
         }
+        
     }
-    
 }
 
 #Preview {
-    CompleteSignUpView()
+    AddEmailView()
 }

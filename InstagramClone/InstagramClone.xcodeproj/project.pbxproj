@@ -15,6 +15,10 @@
 		2FB558EF2C7C8679006F9B05 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB558EE2C7C8679006F9B05 /* FirebaseAuth */; };
 		2FB558F12C7C8679006F9B05 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB558F02C7C8679006F9B05 /* FirebaseFirestore */; };
 		2FB558F32C7C8679006F9B05 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB558F22C7C8679006F9B05 /* FirebaseStorage */; };
+		2FB558F62C7C8E96006F9B05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB558F52C7C8E96006F9B05 /* AuthService.swift */; };
+		2FB558F82C7C8F8E006F9B05 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB558F72C7C8F8E006F9B05 /* ContentViewModel.swift */; };
+		2FC4F1212C7C98D7000C48D6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1202C7C98D7000C48D6 /* RegistrationViewModel.swift */; };
+		2FC4F1232C7CAFE3000C48D6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1222C7CAFE3000C48D6 /* LoginViewModel.swift */; };
 		2FF6B10E2C6F969C00ECF5EE /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10D2C6F969C00ECF5EE /* InstagramCloneApp.swift */; };
 		2FF6B1102C6F969C00ECF5EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10F2C6F969C00ECF5EE /* ContentView.swift */; };
 		2FF6B1122C6F969D00ECF5EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF6B1112C6F969D00ECF5EE /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 		2F94D1812C70D7F40026D15A /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		2F94D1832C70D9260026D15A /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
 		2F94D1852C70E6650026D15A /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		2FB558F52C7C8E96006F9B05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2FB558F72C7C8F8E006F9B05 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2FC4F1202C7C98D7000C48D6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		2FC4F1222C7CAFE3000C48D6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2FF6B10A2C6F969C00ECF5EE /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF6B10D2C6F969C00ECF5EE /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		2FF6B10F2C6F969C00ECF5EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +74,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FB558F42C7C8E64006F9B05 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2FF6B1252C6FA12500ECF5EE /* LoginView.swift */,
+				2F94D17F2C70CC660026D15A /* CreateUsernameView.swift */,
+				2F94D1812C70D7F40026D15A /* CreatePasswordView.swift */,
+				2F94D1832C70D9260026D15A /* CompleteSignUpView.swift */,
+				2FF6B1272C6FA6E100ECF5EE /* AddEmailView.swift */,
+				2FB558F52C7C8E96006F9B05 /* AuthService.swift */,
+				2FC4F1202C7C98D7000C48D6 /* RegistrationViewModel.swift */,
+				2FC4F1222C7CAFE3000C48D6 /* LoginViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		2FF6B1012C6F969C00ECF5EE = {
 			isa = PBXGroup;
 			children = (
@@ -114,18 +137,15 @@
 		2FFA11932C7B4A9000912556 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2F94D17F2C70CC660026D15A /* CreateUsernameView.swift */,
-				2F94D1812C70D7F40026D15A /* CreatePasswordView.swift */,
-				2F94D1832C70D9260026D15A /* CompleteSignUpView.swift */,
+				2FB558F42C7C8E64006F9B05 /* Authentication */,
 				2FF6B10F2C6F969C00ECF5EE /* ContentView.swift */,
 				2FF6B11B2C6F976400ECF5EE /* MainTabView.swift */,
-				2FF6B1252C6FA12500ECF5EE /* LoginView.swift */,
-				2FF6B1272C6FA6E100ECF5EE /* AddEmailView.swift */,
 				2FF6B11D2C6F978600ECF5EE /* FeedView.swift */,
 				2F94D1852C70E6650026D15A /* FeedCell.swift */,
 				2FF6B11F2C6F979400ECF5EE /* SearchView.swift */,
 				2FF6B1212C6F97AD00ECF5EE /* UploadPostView.swift */,
 				2FF6B1232C6F97DE00ECF5EE /* ProfileView.swift */,
+				2FB558F72C7C8F8E006F9B05 /* ContentViewModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FF6B1202C6F979400ECF5EE /* SearchView.swift in Sources */,
+				2FC4F1212C7C98D7000C48D6 /* RegistrationViewModel.swift in Sources */,
 				2F94D1862C70E6650026D15A /* FeedCell.swift in Sources */,
 				2F94D1842C70D9260026D15A /* CompleteSignUpView.swift in Sources */,
+				2FB558F82C7C8F8E006F9B05 /* ContentViewModel.swift in Sources */,
 				2FF6B1222C6F97AD00ECF5EE /* UploadPostView.swift in Sources */,
 				2FF6B11E2C6F978600ECF5EE /* FeedView.swift in Sources */,
 				2FF6B1102C6F969C00ECF5EE /* ContentView.swift in Sources */,
@@ -233,6 +255,8 @@
 				2FF6B1282C6FA6E100ECF5EE /* AddEmailView.swift in Sources */,
 				2FF6B1262C6FA12500ECF5EE /* LoginView.swift in Sources */,
 				2FF6B11C2C6F976400ECF5EE /* MainTabView.swift in Sources */,
+				2FC4F1232C7CAFE3000C48D6 /* LoginViewModel.swift in Sources */,
+				2FB558F62C7C8E96006F9B05 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

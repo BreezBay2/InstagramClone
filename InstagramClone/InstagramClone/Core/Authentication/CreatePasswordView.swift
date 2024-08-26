@@ -1,39 +1,41 @@
 //
-//  AddEmailView.swift
+//  CreatePasswordView.swift
 //  InstagramClone
 //
-//  Created by Taro Altrichter on 16.08.24.
+//  Created by Taro Altrichter on 17.08.24.
 //
 
 import SwiftUI
 
-struct AddEmailView: View {
+struct CreatePasswordView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var email = ""
+    @EnvironmentObject var viewModel: RegistrationViewModel
+    @State private var password = ""
     
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Add your E-Mail")
+        VStack {
+            Text("Create a password")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("You'll use this E-Mail to sign in to your account")
+            Text("Your password must be at least 6 characters in length")
                 .font(.footnote)
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("E-Mail", text: $email)
+            SecureField("Password", text: $viewModel.password)
                 .textInputAutocapitalization(.never)
                 .font(.subheadline)
                 .padding(12)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
                 .padding(.horizontal, 24)
+                .padding(.top)
             
             NavigationLink {
-                CreateUsernameView()
+                CompleteSignUpView()
                     .navigationBarBackButtonHidden()
             } label: {
                 Text("Next")
@@ -46,8 +48,9 @@ struct AddEmailView: View {
             }
             .padding(.vertical)
             
+            
         }
-        .toolbar{
+        .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
@@ -56,10 +59,9 @@ struct AddEmailView: View {
                     }
             }
         }
-        
     }
 }
 
 #Preview {
-    AddEmailView()
+    CreatePasswordView()
 }
