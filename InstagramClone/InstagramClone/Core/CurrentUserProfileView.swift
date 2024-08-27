@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct CurrentUserProfileView: View {
     
     let user: User
 
@@ -129,5 +129,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView(user: User.MOCK_USERS[2])
+    CurrentUserProfileView(user: User.MOCK_USERS[2])
 }
