@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CurrentUserProfileView: View {
+    @State private var showEditProfileView = false
     
     let user: User
 
@@ -88,15 +89,19 @@ struct CurrentUserProfileView: View {
                     
                     // Follow or Edit Profile Button
                     Button {
-                        print("Follow")
+                        showEditProfileView.toggle()
                     } label: {
-                        Text("Follow")
+                        Text("Edit Profile")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .frame(width: 360, height: 32)
-                            .background(Color(.systemBlue))
-                            .foregroundStyle(.white)
+                            .background(.white)
+                            .foregroundStyle(.black)
                             .cornerRadius(6)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(.gray, lineWidth: 1)
+                            )
                     }
                     
                     Divider()
@@ -111,6 +116,9 @@ struct CurrentUserProfileView: View {
                         }
                     }
                 }
+                .fullScreenCover(isPresented: $showEditProfileView, content: {
+                    EditProfileView()
+                })
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
