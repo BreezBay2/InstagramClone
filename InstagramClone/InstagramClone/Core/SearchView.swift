@@ -21,7 +21,6 @@ struct SearchView: View {
                                 Image(systemName: "person.circle.fill")
                                     .resizable()
                                     .frame(width: 40, height: 40)
-                                    .foregroundStyle(.gray)
                                     .clipShape(Circle())
                                     .foregroundStyle(Color(.systemGray4))
                                 

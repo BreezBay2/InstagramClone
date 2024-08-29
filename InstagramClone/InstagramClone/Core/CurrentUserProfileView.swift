@@ -81,8 +81,6 @@ struct CurrentUserProfileView: View {
                         
                         Text(user.bio ?? "")
                             .font(.footnote)
-                        
-                        Text(user.username)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
@@ -117,7 +115,7 @@ struct CurrentUserProfileView: View {
                     }
                 }
                 .fullScreenCover(isPresented: $showEditProfileView, content: {
-                    EditProfileView()
+                    EditProfileView(user: user)
                 })
             }
             .navigationTitle("Profile")

@@ -24,6 +24,8 @@
 		2FC4F1292C7CE809000C48D6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1282C7CE809000C48D6 /* SearchViewModel.swift */; };
 		2FC796B22C7FCBD0007C09C8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC796B12C7FCBD0007C09C8 /* UploadPostViewModel.swift */; };
 		2FC796B42C7FD1B8007C09C8 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC796B32C7FD1B8007C09C8 /* EditProfileView.swift */; };
+		2FC796B62C800DE8007C09C8 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC796B52C800DE8007C09C8 /* EditProfileViewModel.swift */; };
+		2FC796B82C801CFC007C09C8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC796B72C801CFC007C09C8 /* ImageUploader.swift */; };
 		2FEBDDB62C7E54A7009CE6AC /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDDB52C7E54A7009CE6AC /* UserProfileView.swift */; };
 		2FF6B10E2C6F969C00ECF5EE /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10D2C6F969C00ECF5EE /* InstagramCloneApp.swift */; };
 		2FF6B1102C6F969C00ECF5EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6B10F2C6F969C00ECF5EE /* ContentView.swift */; };
@@ -54,6 +56,8 @@
 		2FC4F1282C7CE809000C48D6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2FC796B12C7FCBD0007C09C8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		2FC796B32C7FD1B8007C09C8 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		2FC796B52C800DE8007C09C8 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		2FC796B72C801CFC007C09C8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		2FEBDDB52C7E54A7009CE6AC /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		2FF6B10A2C6F969C00ECF5EE /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF6B10D2C6F969C00ECF5EE /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				2FF6B1212C6F97AD00ECF5EE /* UploadPostView.swift */,
 				2FC796B12C7FCBD0007C09C8 /* UploadPostViewModel.swift */,
 				2FC796B32C7FD1B8007C09C8 /* EditProfileView.swift */,
+				2FC796B52C800DE8007C09C8 /* EditProfileViewModel.swift */,
+				2FC796B72C801CFC007C09C8 /* ImageUploader.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 				2FC4F1212C7C98D7000C48D6 /* RegistrationViewModel.swift in Sources */,
 				2F94D1862C70E6650026D15A /* FeedCell.swift in Sources */,
 				2F94D1842C70D9260026D15A /* CompleteSignUpView.swift in Sources */,
+				2FC796B82C801CFC007C09C8 /* ImageUploader.swift in Sources */,
 				2FB558F82C7C8F8E006F9B05 /* ContentViewModel.swift in Sources */,
 				2FF6B1222C6F97AD00ECF5EE /* UploadPostView.swift in Sources */,
+				2FC796B62C800DE8007C09C8 /* EditProfileViewModel.swift in Sources */,
 				2FF6B11E2C6F978600ECF5EE /* FeedView.swift in Sources */,
 				2FEBDDB62C7E54A7009CE6AC /* UserProfileView.swift in Sources */,
 				2FF6B1102C6F969C00ECF5EE /* ContentView.swift in Sources */,
