@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F475F382C7BCA62002C180F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F475F372C7BCA62002C180F /* GoogleService-Info.plist */; };
+		2F6191E52C82288C00A48D18 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6191E42C82288C00A48D18 /* FeedViewModel.swift */; };
+		2F6191E72C8228E500A48D18 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6191E62C8228E500A48D18 /* PostService.swift */; };
 		2F94D1802C70CC660026D15A /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94D17F2C70CC660026D15A /* CreateUsernameView.swift */; };
 		2F94D1822C70D7F40026D15A /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94D1812C70D7F40026D15A /* CreatePasswordView.swift */; };
 		2F94D1842C70D9260026D15A /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94D1832C70D9260026D15A /* CompleteSignUpView.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		2F475F372C7BCA62002C180F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2F6191E42C82288C00A48D18 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		2F6191E62C8228E500A48D18 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2F94D17F2C70CC660026D15A /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		2F94D1812C70D7F40026D15A /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		2F94D1832C70D9260026D15A /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
@@ -159,16 +163,18 @@
 				2FF6B11B2C6F976400ECF5EE /* MainTabView.swift */,
 				2FF6B11D2C6F978600ECF5EE /* FeedView.swift */,
 				2F94D1852C70E6650026D15A /* FeedCell.swift */,
+				2F6191E42C82288C00A48D18 /* FeedViewModel.swift */,
 				2FF6B11F2C6F979400ECF5EE /* SearchView.swift */,
 				2FC4F1282C7CE809000C48D6 /* SearchViewModel.swift */,
 				2FF6B1232C6F97DE00ECF5EE /* CurrentUserProfileView.swift */,
-				2FC4F1262C7CE781000C48D6 /* UserService.swift */,
 				2FEBDDB52C7E54A7009CE6AC /* UserProfileView.swift */,
 				2FF6B1212C6F97AD00ECF5EE /* UploadPostView.swift */,
 				2FC796B12C7FCBD0007C09C8 /* UploadPostViewModel.swift */,
 				2FC796B32C7FD1B8007C09C8 /* EditProfileView.swift */,
 				2FC796B52C800DE8007C09C8 /* EditProfileViewModel.swift */,
 				2FC796B72C801CFC007C09C8 /* ImageUploader.swift */,
+				2F6191E62C8228E500A48D18 /* PostService.swift */,
+				2FC4F1262C7CE781000C48D6 /* UserService.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -279,11 +285,13 @@
 				2FF6B1242C6F97DE00ECF5EE /* CurrentUserProfileView.swift in Sources */,
 				2FFA11982C7B863C00912556 /* Post.swift in Sources */,
 				2F94D1802C70CC660026D15A /* CreateUsernameView.swift in Sources */,
+				2F6191E52C82288C00A48D18 /* FeedViewModel.swift in Sources */,
 				2F94D1822C70D7F40026D15A /* CreatePasswordView.swift in Sources */,
 				2FF6B1282C6FA6E100ECF5EE /* AddEmailView.swift in Sources */,
 				2FC4F1292C7CE809000C48D6 /* SearchViewModel.swift in Sources */,
 				2FC796B42C7FD1B8007C09C8 /* EditProfileView.swift in Sources */,
 				2FF6B1262C6FA12500ECF5EE /* LoginView.swift in Sources */,
+				2F6191E72C8228E500A48D18 /* PostService.swift in Sources */,
 				2FC4F1272C7CE781000C48D6 /* UserService.swift in Sources */,
 				2FF6B11C2C6F976400ECF5EE /* MainTabView.swift in Sources */,
 				2FC4F1232C7CAFE3000C48D6 /* LoginViewModel.swift in Sources */,

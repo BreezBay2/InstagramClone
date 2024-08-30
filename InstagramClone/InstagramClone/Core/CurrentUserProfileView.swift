@@ -31,11 +31,21 @@ struct CurrentUserProfileView: View {
                     
                     // picture + numbers
                     HStack {
-                        Image(user.profileImageUrl ?? "")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .clipShape(Circle())
-                            .foregroundStyle(Color(.systemGray4))
+                        let imageUrl = URL(string: user.profileImageUrl ?? "")
+                        
+                        AsyncImage(url: imageUrl) { image in
+                            image
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .foregroundStyle(Color(.systemGray4))
+                        } placeholder: {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .foregroundStyle(Color(.systemGray2))
+                        }
                         
                         Spacer()
                         

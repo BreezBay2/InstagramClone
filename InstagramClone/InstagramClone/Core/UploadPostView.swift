@@ -31,7 +31,10 @@ struct UploadPostView: View {
                 Spacer()
                 
                 Button {
-                    clearPostDataAndReturnToFeed()
+                    Task {
+                        try await viewModel.uploadPost(caption: caption)
+                        clearPostDataAndReturnToFeed()
+                    }
                 } label: {
                     Text("Upload")
                         .fontWeight(.semibold)

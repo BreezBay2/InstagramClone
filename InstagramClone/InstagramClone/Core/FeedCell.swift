@@ -15,11 +15,23 @@ struct FeedCell: View {
             // username + image
             HStack {
                 if let user = post.user {
-                    Image(user.profileImageUrl ?? "")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                        .foregroundStyle(Color(.systemGray4))
+                    if let imageUrl = user.profileImageUrl {
+                        let profileImageUrl = URL(string: imageUrl)
+                        
+                        AsyncImage(url: profileImageUrl) { image in
+                            image
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .clipShape(Circle())
+                                .foregroundStyle(Color(.systemGray4))
+                        } placeholder: {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .clipShape(Circle())
+                                .foregroundStyle(Color(.systemGray4))
+                        }
+                    }
                     
                     Text(user.username)
                         .font(.footnote)
@@ -32,11 +44,20 @@ struct FeedCell: View {
             .padding(.leading, 8)
             
             // post
-            Image(post.imageUrl)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 400)
-                .clipShape(Rectangle())
+            let imageUrl = URL(string: post.imageUrl)
+            AsyncImage(url: imageUrl) { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 400)
+                    .clipShape(Rectangle())
+            } placeholder: {
+                Image("picture1")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 400)
+                    .clipShape(Rectangle())
+            }
             
             // action buttons
             HStack(spacing: 16) {
