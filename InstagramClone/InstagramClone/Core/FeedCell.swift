@@ -31,6 +31,12 @@ struct FeedCell: View {
                                 .clipShape(Circle())
                                 .foregroundStyle(Color(.systemGray4))
                         }
+                    } else {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                            .foregroundStyle(Color(.systemGray4))
                     }
                     
                     Text(user.username)
@@ -99,8 +105,7 @@ struct FeedCell: View {
             // post caption
             HStack {
                 Text("\(post.user?.username ?? "") ")
-                    .fontWeight(.semibold)
-                Text(post.caption)
+                    .fontWeight(.semibold) + Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)

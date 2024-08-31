@@ -11,16 +11,19 @@ struct CurrentUserProfileView: View {
     @State private var showEditProfileView = false
     
     let user: User
+    
+    @StateObject var viewModel: UserProfileViewModel
+    
+    init(user: User) {
+        self.user = user
+        self._viewModel = StateObject(wrappedValue: UserProfileViewModel(user: user))
+    }
 
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1)
     ]
-    
-    var posts: [Post] {
-        return Post.MOCK_POSTS.filter({ $0.user?.username == user.username})
-    }
     
     private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
@@ -38,7 +41,6 @@ struct CurrentUserProfileView: View {
                                 .resizable()
                                 .frame(width: 80, height: 80)
                                 .clipShape(Circle())
-                                .foregroundStyle(Color(.systemGray4))
                         } placeholder: {
                             Image(systemName: "person.circle.fill")
                                 .resizable()
@@ -95,7 +97,7 @@ struct CurrentUserProfileView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     
-                    // Follow or Edit Profile Button
+                    // Edit Profile Button
                     Button {
                         showEditProfileView.toggle()
                     } label: {
@@ -115,12 +117,20 @@ struct CurrentUserProfileView: View {
                     Divider()
                     
                     LazyVGrid(columns: gridItems, spacing: 1) {
-                        ForEach(posts) { post in
-                            Image(post.imageUrl)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: imageDimension, height: imageDimension)
-                                .clipped()
+                        ForEach(viewModel.posts) { post in
+                            AsyncImage(url: URL(string: post.imageUrl)) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: imageDimension, height: imageDimension)
+                                    .clipped()
+                            } placeholder: {
+                                Image("picture1")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: imageDimension, height: imageDimension)
+                                    .clipped()
+                            }
                         }
                     }
                 }

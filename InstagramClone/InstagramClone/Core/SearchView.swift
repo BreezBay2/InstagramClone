@@ -18,11 +18,21 @@ struct SearchView: View {
                     ForEach(viewModel.users) { user in
                         NavigationLink(value: user) {
                             HStack {
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
-                                    .foregroundStyle(Color(.systemGray4))
+                                
+                                AsyncImage(url: URL(string: user.profileImageUrl ?? "")) { image in
+                                    image
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                    
+                                } placeholder: {
+                                    Image(systemName: "person.circle.fill")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                        .foregroundStyle(Color(.systemGray4))
+                                    
+                                }
                                 
                                 VStack(alignment: .leading) {
                                     Text(user.username)
